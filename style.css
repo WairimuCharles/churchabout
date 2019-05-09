@@ -1903,140 +1903,109 @@ img {
 body{
     font-family: 'Quicksand', sans-serif;
 }
-.gal-container{
-	padding: 12px;
+.team{
+    padding:75px 0;
 }
-.gal-item{
-	overflow: hidden;
-	padding: 3px;
+h6.description{
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #999;
+	border-bottom: 1px solid rgba(0, 0, 0,0.1);
+	padding-bottom: 5px;
 }
-.gal-item .box{
-	height: 350px;
-	overflow: hidden;
+.profile{
+	margin-top: 25px;
 }
-.box img{
-	height: 100%;
-	width: 100%;
-	object-fit:cover;
-	-o-object-fit:cover;
+.profile h1{
+	font-weight: normal;
+	font-size: 20px;
+	margin:10px 0 0 0;
 }
-.gal-item a:focus{
-	outline: none;
+.profile h2{
+	font-size: 14px;
+	font-weight: lighter;
+	margin-top: 5px;
 }
-.gal-item a:after{
-	content:"\e003";
-	font-family: 'Glyphicons Halflings';
+.profile .img-box{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+.profile .img-box:after{
+	content:"";
 	opacity: 0;
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
-	right: 3px;
-	left: 3px;
-	top: 3px;
-	bottom: 3px;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+.img-box ul{
+	position: absolute;
+	z-index: 2;
+	bottom: 50px;
 	text-align: center;
-    line-height: 350px;
-    font-size: 30px;
-    color: #fff;
-    -webkit-transition: all 0.5s ease-in-out 0s;
+	width: 100%;
+	padding-left: 0px;
+	height: 0px;
+	margin:0px;
+	opacity: 0;
+}
+.profile .img-box:after, .img-box ul, .img-box ul li{
+	-webkit-transition: all 0.5s ease-in-out 0s;
     -moz-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
 }
-.gal-item a:hover:after{
+.img-box ul i{
+	font-size: 20px;
+	letter-spacing: 10px;
+}
+.img-box ul li{
+	width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #88C425;
+    margin: 2px;
+    padding: 5px;
+	display: inline-block;
+}
+.img-box a{
+	color:#fff;
+}
+.img-box:hover:after{
 	opacity: 1;
 }
-.modal-open .gal-container .modal{
-	background-color: rgba(0,0,0,0.4);
+.img-box:hover ul{
+	opacity: 1;
 }
-.modal-open .gal-item .modal-body{
-	padding: 0px;
+.img-box ul a{
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
 }
-.modal-open .gal-item button.close{
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: #000;
-    opacity: 1;
-    color: #fff;
-    z-index: 999;
-    right: -12px;
-    top: -12px;
-    border-radius: 50%;
-    font-size: 15px;
-    border: 2px solid #fff;
-    line-height: 25px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
-	box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+.img-box a:hover li{
+	border-color: #fff;
+	color: #88C425;
 }
-.modal-open .gal-item button.close:focus{
-	outline: none;
+a{
+    color:#88C425;
 }
-.modal-open .gal-item button.close span{
-	position: relative;
-	top: -3px;
-	font-weight: lighter;
-	text-shadow:none;
+a:hover{
+    text-decoration:none;
+    color:#519548;
 }
-.gal-container .modal-dialogue{
-	width: 80%;
-}
-.gal-container .description{
-	position: relative;
-	height: 40px;
-	top: -40px;
-	padding: 10px 25px;
-	background-color: rgba(0,0,0,0.5);
-	color: #fff;
-	text-align: left;
-}
-.gal-container .description h4{
-	margin:0px;
-	font-size: 15px;
-	font-weight: 300;
-	line-height: 20px;
-}
-.gal-container .modal.fade .modal-dialog {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-    top: 100px;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-.gal-container .modal.fade.in .modal-dialog {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform: translate3d(0, -100px, 0);
-    transform: translate3d(0, -100px, 0);
-    opacity: 1;
-}
-@media (min-width: 768px) {
-.gal-container .modal-dialog {
-    width: 55%;
-    margin: 50 auto;
-}
-}
-@media (max-width: 768px) {
-    .gal-container .modal-content{
-        height:250px;
-    }
-}
-/* Footer Style */
 i.red{
     color:#BC0213;
 }
-.gal-container{
-    padding-top :75px;
-    padding-bottom:75px;
+.add{
+  text-align: center;
+  padding-top: 20px;
 }
-footer{
-    font-family: 'Quicksand', sans-serif;
-}
-footer a,footer a:hover{
-    color: #88C425;
-}
+  @media(min-width: 768px){
+    .add{
+      text-align: center;
+      padding-top: 20px;
+      padding-left: 180px;
+    }
+  }
